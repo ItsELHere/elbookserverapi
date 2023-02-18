@@ -22,6 +22,8 @@ Server.use(cors());
 Server.use(bodyParser.urlencoded({ extended: true }));
 
 //  Homepage
+
+//  This is the first endpoint to check the server
 Server.get("/", (req, res) => {
   res.send("This is ElBook API");
 });
