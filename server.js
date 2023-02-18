@@ -21,6 +21,11 @@ Server.use(cookieParser());
 Server.use(cors());
 Server.use(bodyParser.urlencoded({ extended: true }));
 
+//  Homepage
+Server.get("/", (req, res) => {
+  res.send("This is ElBook API");
+});
+
 //  Router Module
 Server.use("/product", ProductRouter);
 Server.use("/account", AccountRouter);
